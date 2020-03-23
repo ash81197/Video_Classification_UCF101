@@ -68,7 +68,7 @@ models used:
 	
 	ResNet50V2
 	
-	ResNet101
+	ResNet101V2
 	
 	MobileNet
 	
