@@ -49,12 +49,18 @@ for training purpose we used "training_set/" directory and for testing we used "
 
 
 # Model Analysis:
-models used:			ResNet50
-				ResNet101
-				ResNet50V2
-				ResNet101
-				MobileNet
-				MobileNetV2
+models used:		
+	ResNet50
+	
+	ResNet101
+	
+	ResNet50V2
+	
+	ResNet101
+	
+	MobileNet
+	
+	MobileNetV2
 
 MobileNet and MobileNetV2 are worst model to perform video classification because they aren't made for heavy datasets infact they are made for Mobile and Embedded Devices, hence named "Mobile"
 also MobileNets are giving good accuracies but have higher losses, that's why we discarded this model
@@ -66,15 +72,27 @@ ResNet50 and ResNet50v2, both are giving much impressive results than their coun
 
 # Required Parameters
 dataset = "UCF-101/"                	  				# Actual Dataset Path
+
 dataset2 = "dataset/"               	  				# After Combining all videos of the Dataset, the recreated Dataset Path
+
 train_path = "training_set/"     	      				# Training Path
+
 test_path = "testing_set/"          	  				# Testing Path
-no_of_frames = 1650                 	  				# Number of Frames to be extracted from a single category
+
+no_of_frames = 1650                 	  				# Number of Frames to be extracted from a single 
+
+category
+
 epochs = 20                                     # Number of epochs to run
+
 batch_size = 32                	 					      # Batch Size
+
 n_classes = 101                	  					    # Number of Classes
+
 optimizer = "Adam" 						  	              # Adam (adaptive momentum) optimizer is used
+
 loss_metric = "categorical_crossentropy"  		  # Loss Metric used for every model is one and same
+
 last_layer_activation_function = "softmax"			# Softmax function is used for last layer
 
 input shape of ResNet50, ResNet101, ResNet50V2, ResNet101, MobileNet and MobileNetV2 are all the same and that is: (224, 224, 3) => [image height, image width and number of channels]
